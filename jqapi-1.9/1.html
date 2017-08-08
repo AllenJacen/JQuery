@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+#div1{
+    height: 20px;
+    width: 20px;
+    background: red;
+}
+    </style>
+    <div id="div1"></div>
+</head>
+<body>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+    var oDiv1=document.getElementById("div1");
+
+            //文档就绪函数，1能够保证DOM结构加载完成。2还不会污染全局变量。
+          /*  $(document).ready(function(){
+                $("#div1").css("background","green");
+            });*/
+    $(function(){
+        $("#div1").css("background","green");
+    });
+   // $(oDiv1).css("background","green");//把原生对象转发为jq对象。
+   // $("#div1")[0].innerHTML;
+   // $("#div1").get(0).innerHTML;//把jq对象转发为原生对象。
+    //选择器
+   // :eq(？) ？；正数，从前面数 ;负数：倒数
+    //:even
+    //:odd
+
+
+
+</script>
+</body>
+</html>

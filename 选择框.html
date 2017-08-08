@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>你喜欢的运动？</h1>
+<from >
+    <input type="checkbox" name="hobby" checked>足球
+    <input type="checkbox" name="hobby">篮球
+    <input type="checkbox" name="hobby">排球
+    <input type="checkbox" name="hobby">网球
+<br><br>
+<input type="button" id="check-all" value="全选">
+<input type="button" id="check-no" value="全不选">
+<input type="button" id="check-reverse" value="反选">
+</from>
+
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+       /* $("#check-all").on("click",functio n(){
+           $("input[name='hobby']").attr('checked','true');
+        });
+        $("#check-no").on("click",function(){
+            $("input[name='hobby']").removeAttr('checked','true');
+        });
+        */
+        $("#check-all").on("click",function(){
+            $("input[name='hobby']").prop('checked','true');
+        });
+        $("#check-no").on("click",function(){
+            $("input[name='hobby']").removeProp('checked','true');
+        });
+
+        $("#check-reverse").on("click",function(){
+            $("input[name='hobby']").each(function(){
+//              console.log(this);
+                var Hobby=$("input[name='hobby']");
+                console.log(Hobby.prop("checked"));
+
+                if(Hobby.prop("checked")){
+                 Hobby.removeProp("checked");
+             }else{
+                 Hobby.prop("checked",true);
+             }
+//                this.checked=!this.checked;
+            })
+        });
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

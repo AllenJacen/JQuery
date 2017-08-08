@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<input type="text" id="search">
+<ul id="result">
+    <li>iphone</li>
+    <li>huawei</li>
+    <li>vivo</li>
+</ul>
+
+
+
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+$(function(){
+   $("#search").on("keyup",function(){
+//               console.log(e.keyCode);键值
+//              console.log($("#search").val());
+//              console.log($(this).val().toLowerCase()) ;
+              /* console.log($(this));//找到文本框的对象
+               console.log(this);//找到文本框标签*/
+               //.val() 获得匹配元素的当前值。无参数 描述:获取文本框中的值
+       $("#result li").css("background","transparent");//transparent透明的意思。
+               //也可以写成$(this).val()!=""
+               if($("#search").val()!=""){
+                   $("#result li:contains("+$(this).val().toLowerCase()+")").css("background","red");
+               }
+//.toLowerCase() 方法用于把字符串转换为小写。
+
+           }
+
+   );
+
+
+});
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
