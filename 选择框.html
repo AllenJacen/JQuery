@@ -36,15 +36,20 @@
         });
 
         $("#check-reverse").on("click",function(){
-            $("input[name='hobby']").each(function(){
-//              console.log(this);
-                var Hobby=$("input[name='hobby']");
-                console.log(Hobby.prop("checked"));
-
-                if(Hobby.prop("checked")){
-                 Hobby.removeProp("checked");
+            var $Hobby=$("input[name='hobby']");
+/*
+             $Hobby.each(function(index,elem){
+               if($(elem).prop("checked")){
+                 $(elem).removeProp("checked");
+                 }else{
+                 $(elem).prop("checked", "true");
+                 }*/
+            $Hobby.each(function(index,e){
+//                console.log($(e).index);
+                if($(e).prop("checked")){
+                    $(e).removeProp("checked");
              }else{
-                 Hobby.prop("checked",true);
+                    $(e).prop("checked","true");
              }
 //                this.checked=!this.checked;
             })
