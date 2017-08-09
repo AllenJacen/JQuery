@@ -31,7 +31,8 @@ $(function(){
                if($("#search").val()!=""){
                    $("#result li:contains("+$(this).val().toLowerCase()+")").css("background","red");
                }
-//.toLowerCase() 方法用于把字符串转换为小写。
+               //$(this).val()得到的是个字符串，在JS中字符串对象有很多方法。
+               //.toLowerCase() 方法用于把字符串转换为小写。
 
            }
 

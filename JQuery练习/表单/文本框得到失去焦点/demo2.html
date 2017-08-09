@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        fieldset{
+            width: 600px;
+            height: 110px;
+        }
+        input, textarea {
+            width: 12em;
+            border: 1px solid #888;
+        }
+        fieldset div{
+            margin-top: 5px;
+        }
+        .focus{
+            border: 1px solid #f00;
+            background: #fcc;
+        }
+    </style>
+</head>
+<body>
+<form action="" id="from1">
+    <fieldset>
+        <legend id="title">个人基本信息</legend>
+        <div>
+            <label for="name">名称：</label>
+            <input id="name" type="text" value="2015214311"/>
+        </div>
+        <div>
+            <label for="pass">密码：</label>
+            <input id="pass" type="password" value="123456"/>
+        </div>
+        <div>
+            <label for="txa">详细信息：</label>
+            <textarea id="txa" value="hahahahh">详细的信息</textarea>
+        </div>
+    </fieldset>
+</form>
+
+<script src="../../../jquery-1.12.4.js"></script>
+<script src="demo2.js"></script>
+
+<script>
+    $(function(){
+
+        /* 文本框得到/失去焦点练习，完成文本框得到/失去焦点时动态变换文本框样式功能。
+
+         思路：选中所有的输入框，注册获得焦点事件，添加样式：focus；注册失去焦点事件，动态移除样式：focus
+         要求：尽量使用链式操作*/
+    })
+</script>
+</body>
+</html>
