@@ -7,7 +7,6 @@ $(":input").focusin(function(){
     //$(this).attr("value","2222");
     if($(this).val()==this.defaultValue){
         //$(this).val("");
-
        this.value="";
     }
 
