@@ -9,17 +9,21 @@
     th			{ font:bold 12px/17px Arial;text-align:left;padding:4px;border-bottom:1px solid #333;width:100px;}
     .parent		{ background:#FFF38F;cursor:pointer;}  /* 偶数行样式*/
     .odd		{ background:#FFFFEE;}  /* 奇数行样式*/
-    .selected		{ background:#FF6500;color:#fff;}
+    .selected		{
+        background:#FF6500;color:#fff;
+        display: none;
+    }
+
     </style>
     <!--   ����jQuery -->
     <script src="../../../jquery-1.12.4.js" type="text/javascript"></script>
     <!--<script src="demo.js" type="text/javascript"></script>-->
     <script type="text/javascript">
 $(function(){
-$("tbody #row_01").on("click",function(){
-
-})
-
+$("tr.parent").on("click",function(){
+    $(this).siblings(".child_row_01").addClass("selected");
+}
+)
 })
 
 
@@ -32,8 +36,8 @@ $("tbody #row_01").on("click",function(){
     </thead>
     <tbody>
     <tr class="parent" id="row_01"><td colspan="3">菜单1</td></tr>
-    <tr class="child_row_01"><td>张山</td><td>男</td><td>浙江宁波</td></tr>
-    <tr class="child_row_01"><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+    <tr class="child_row_01 "><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+    <tr class="child_row_01 "><td>李四</td><td>女</td><td>浙江杭州</td></tr>
 
     <tr class="parent" id="row_02"><td colspan="3">菜单2</td></tr>
     <tr class="child_row_02"><td>王五</td><td>男</td><td>湖南长沙</td></tr>
