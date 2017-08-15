@@ -16,11 +16,15 @@ $(function(){
 
 //hot
     $(".sole").append('<span class="hot"></span>');
-//
 
 
 
-
+//导航栏
+    $("#mainnav li").hover(function(){
+        $(this).children(".jnNav").show();
+    }, function(){
+        $(this).children(".jnNav").hide();
+    });
 
 
 //轮播图1
@@ -32,7 +36,7 @@ $(function(){
     })
 
 
-//�ֲ�ͼ2
+//轮播图2
     $('#jnBrandTab li').on("click",function(){
         $(this).addClass("chos").siblings().removeClass("chos");
         console.log($("#jnBrandList li").innerWidth()*4*$(this).index());
@@ -43,25 +47,28 @@ $(function(){
     })
 
 
-//
+//换肤
+if($.cookie("skin")){
+    //var skin= $.cookie("skin");
+    changeSkin($.cookie("skin"));
+}
+
+ $('#skin li').on("click",function(){
+    var skin=$(this).attr("id");
+    $.cookie("skin",skin,{expires:30})
+             changeSkin(skin);
+         });
+
+  function changeSkin(skin){
+      $('#cssfile').attr("href","css/skin/"+skin+".css");
+      $("#"+skin).addClass("selected").siblings().removeClass("selected");
+  }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//tooltip
+ tooltip("#jnNoticeInfo .tooltip");
 
 
 

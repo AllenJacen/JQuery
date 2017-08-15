@@ -39,20 +39,41 @@
     cursor: pointer;
     background-image:  url("../img/theme.gif");
 }
-#skin_2{
+#skin_0{
+    background-position:0px 0px;
+}
+#skin_1{
     background-position:15px 0px;
 }
-#skin_3{
+#skin_2{
     background-position:35px 0px;
 }
-#skin_4{
+#skin_3{
     background-position:55px 0px;
 }
-#skin_5{
+#skin_4{
     background-position:75px 0px;
 }
-#skin_6{
+#skin_5{
     background-position:95px 0px;
+}
+#skin_0.selected{
+    background-position:0px 16px;
+}
+#skin_1.selected{
+    background-position:15px 16px;
+}
+#skin_2.selected{
+    background-position:35px 16px;
+}
+#skin_3.selected{
+    background-position:55px 16px;
+}
+#skin_4.selected{
+    background-position:75px 16px;
+}
+#skin_5.selected{
+    background-position:95px 16px;
 }
 #mainnav ul{
    margin-left:30px;
@@ -68,12 +89,84 @@
 }
 
 
+/*有问题*/
+ #mainnav .jnNav{
+    background: #FFFFFF;
+    border: 1px solid #B1B1B1;
+    border-top: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    width: 474px;
+    z-index: 1000;
+    display: none;
+}
+ .jn1{
+     left: 100px;
+ }
+.jn2{
+    left: 150px;
+}
+.jn3{
+    left: 210px;
+}
+#mainnav .jnNav .subitem {
+    float: left;
+    height: auto !important;
+    min-height: 100px;
+    padding: 10px 12px;
+    width: 450px;
+}
+ #mainnav .jnNav .subitem .fore{
+    border-top-style: none;
+    padding-top: 0;
+}
+ #mainnav .jnNav .subitem dl{
+    border-top: 1px dashed #C4C4C4;
+    overflow: hidden;
+    padding: 8px 0;
+    float: left;
+}
+#mainnav .jnNav .subitem dt {
+    float: left;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 4px 3px;
+    text-align: center;
+    width: 76px;
+}
+#mainnav .jnNav .subitem dd {
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 364px;
+}
+ #mainnav .jnNav .subitem dt a{
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0;
+}
+#mainnav .jnNav .subitem dd em{
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 20px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+#mainnav .jnNav .subitem dd em a{
+    color: #666666;
+    /*white-space: nowrap;*/
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0;
+}
 
 
 
-
-
-
+/*有问题*/
 
 
 
@@ -110,7 +203,7 @@
     line-height: 30px;
 }
 #left-head h4{
-    margin-left: 10px;
+    padding-left: 10px;
 }
 #left-main{
     /*background: #0069c1;*/
@@ -259,7 +352,6 @@
 
 
 
-
  #main-carousel{
     position: relative;
 }
@@ -363,4 +455,12 @@ color: #FFFFFF;
     /*background: #0069c1;*/
     line-height: 54px;
     text-align: center;
+}
+#tooltip{
+    position:absolute;
+    border:1px solid #333;
+    background:#f7f5d1;
+    padding:1px;
+    color:#333;
+    /*display:none;*/
 }
